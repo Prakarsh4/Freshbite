@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshBite - Delicious Food Delivered</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR START -->
+<!-- NAVBAR START -->
+<header class="header">
+    <nav class="navbar">
+        
+        <!-- Brand Group: Logo + Location Search Dropdown -->
+       
+        <!-- Brand Group: Logo + Location Search Dropdown -->
+<div class="brand-box">
+    <!-- Logo -->
+    <a href="#hero" class="logo">
+        <i class="fa-solid fa-burger"></i> Fresh<span>Bite</span>
+    </a>
+
+    <!-- Searchable Location Selector -->
+    <div class="location-selector" id="locationSelector">
+        <div class="location-btn" id="locationBtn">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="selectedCity">Select City</span>
+            <i class="fa-solid fa-chevron-down arrow"></i>
+        </div>
+
+        <div class="location-dropdown" id="locationDropdown">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="citySearch" placeholder="Search city..." onkeyup="filterCities()">
+            </div>
+            <ul class="city-list" id="cityList">
+                <li onclick="selectCity('Mumbai')">Mumbai</li>
+                <li onclick="selectCity('Delhi')">Delhi</li>
+                <li onclick="selectCity('Bengaluru')">Bengaluru</li>
+                <li onclick="selectCity('Hyderabad')">Hyderabad</li>
+                <li onclick="selectCity('Ahmedabad')">Ahmedabad</li>
+                <li onclick="selectCity('Chennai')">Chennai</li>
+                <li onclick="selectCity('Kolkata')">Kolkata</li>
+                <li onclick="selectCity('Surat')">Surat</li>
+                <li onclick="selectCity('Pune')">Pune</li>
+                <li onclick="selectCity('Jaipur')">Jaipur</li>
+                <li onclick="selectCity('Lucknow')">Lucknow</li>
+                <li onclick="selectCity('Kanpur')">Kanpur</li>
+                <li onclick="selectCity('Nagpur')">Nagpur</li>
+                <li onclick="selectCity('Indore')">Indore</li>
+                <li onclick="selectCity('Thane')">Thane</li>
+                <li onclick="selectCity('Bhopal')">Bhopal</li>
+                <li onclick="selectCity('Visakhapatnam')">Visakhapatnam</li>
+                <li onclick="selectCity('Pimpri-Chinchwad')">Pimpri-Chinchwad</li>
+                <li onclick="selectCity('Patna')">Patna</li>
+                <li onclick="selectCity('Vadodara')">Vadodara</li>
+                <li onclick="selectCity('Ghaziabad')">Ghaziabad</li>
+                <li onclick="selectCity('Ludhiana')">Ludhiana</li>
+                <li onclick="selectCity('Agra')">Agra</li>
+                <li onclick="selectCity('Nashik')">Nashik</li>
+                <li onclick="selectCity('Ranchi')">Ranchi</li>
+                <li onclick="selectCity('Faridabad')">Faridabad</li>
+                <li onclick="selectCity('Meerut')">Meerut</li>
+                <li onclick="selectCity('Rajkot')">Rajkot</li>
+                <li onclick="selectCity('Varanasi')">Varanasi</li>
+                <li onclick="selectCity('Srinagar')">Srinagar</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <!-- Nav Links -->
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#restaurants" class="nav-link">Restaurants</a></li>
+            <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Right Action Buttons -->
+        <div class="nav-actions">
+            <a href="#cart" class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="#login" class="login-btn">Login</a>
+        </div>
+
+    </nav>
+</header>
+<!-- NAVBAR END -->
+    <!-- NAVBAR END -->
+
+    <!-- Placeholder Section to test scrolling -->
+    <section id="hero" class="hero">
+        <h1>Welcome to FreshBite</h1>
+    </section>
+    <script src="JS/style.js"></script>
+
+</body>
+</html>
