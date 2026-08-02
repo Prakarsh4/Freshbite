@@ -1,0 +1,33 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 2rem;
+}
+/* Nav Links */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-orange);
+}
+
+/* Nav Right Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
