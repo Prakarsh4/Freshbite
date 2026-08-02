@@ -1,0 +1,28 @@
+.cart-btn {
+    position: relative;
+    font-size: 1.3rem;
+    color: var(--dark-brown);
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.cart-btn:hover {
+    transform: scale(1.1);
+    color: var(--primary-orange);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary-orange);
+    color: var(--white);
+    font-size: 0.72rem;
+    font-weight: 600;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
