@@ -1,0 +1,21 @@
+/* City List Inside Dropdown */
+.city-list {
+    list-style: none;
+    max-height: 170px;
+    overflow-y: auto;
+}
+
+.city-list li {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: var(--dark-brown);
+    transition: all 0.2s ease;
+}
+
+.city-list li:hover {
+    background-color: var(--cream-bg);
+    color: var(--primary-orange);
+    font-weight: 500;
+}
