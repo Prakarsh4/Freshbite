@@ -1,0 +1,64 @@
+.location-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: var(--light-brown);
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.location-btn i.fa-location-dot {
+    color: var(--primary-orange);
+    font-size: 0.85rem;
+}
+
+.location-btn:hover {
+    color: var(--primary-orange);
+}
+
+/* Location Dropdown Menu */
+.location-dropdown {
+    display: none;
+    position: absolute;
+    top: 130%;
+    left: 0;
+    width: 230px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(45, 27, 18, 0.15);
+    padding: 12px;
+    z-index: 1001;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.location-dropdown.active {
+    display: block !important;
+}
+
+/* Search Box Inside Dropdown */
+.location-dropdown .search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cream-bg);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #F2E4D8;
+}
+
+.location-dropdown .search-box i {
+    font-size: 0.85rem;
+    color: var(--light-brown);
+}
+
+.location-dropdown .search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 0.85rem;
+    color: var(--dark-brown);
+}

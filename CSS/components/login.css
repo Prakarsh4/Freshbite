@@ -1,0 +1,26 @@
+.login-btn {
+    text-decoration: none;
+    background-color: var(--primary-orange);
+    color: var(--white);
+    padding: 0.55rem 1.4rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25);
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #E05523;
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hero section ke baad mobile menu drawer add kar sakte hain */
+    }
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+}

@@ -1,0 +1,16 @@
+/* Logo Styling (Playful Font) */
+.logo {
+    font-family: 'Fredoka', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1;
+}
+
+.logo i, .logo span {
+    color: var(--primary-orange);
+}
