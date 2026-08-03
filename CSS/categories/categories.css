@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Food Categories Section - EatSure Style Photo Grid
+   ========================================================================== */
+
+/* --- 1. Design Variables --- */
+:root {
+  --cat-primary: #FF6B35;
+  --cat-bg: #FFF8F0;
+  --cat-text-dark: #2D1B12;
+  --cat-text-muted: #6B5B52;
+  --cat-radius-lg: 20px;
+  --cat-radius-sm: 12px;
+  --cat-shadow: 0 12px 28px rgba(45, 27, 18, 0.08);
+  --cat-shadow-hover: 0 20px 40px rgba(45, 27, 18, 0.18);
+  --cat-transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- 2. Container --- */
+.categories {
+  background-color: var(--cat-bg);
+  padding: 4.5rem 1.25rem;
+}
+
+.categories__container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* --- 3. Header --- */
+.categories__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.categories__badge {
+  display: inline-block;
+  background-color: rgba(255, 107, 53, 0.12);
+  color: var(--cat-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 0.875rem;
+}
+
+.categories__title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--cat-text-dark);
+  line-height: 1.2;
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.02em;
+}
+
+.categories__title-accent {
+  color: var(--cat-primary);
+}
+
+.categories__subtitle {
+  font-size: 1rem;
+  color: var(--cat-text-muted);
+  line-height: 1.6;
+}
+
+/* --- 4. Responsive Photo Grid --- */
+.categories__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* --- 5. Photo Card Styling --- */
+.category-card {
+  position: relative;
+  border-radius: var(--cat-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--cat-shadow);
+  cursor: pointer;
+  background-color: #FFFFFF;
+  transition: var(--cat-transition);
+  /* Fixed Aspect Ratio matching EatSure style grid cards */
+  aspect-ratio: 4 / 3;
+}
+
+.category-card__img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.category-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Bottom Glassmorphism Overlay Bar */
+.category-card__overlay {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  background: rgba(30, 18, 12, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  padding: 0.75rem 1rem;
+  border-radius: var(--cat-radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--cat-transition);
+}
+
+.category-card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
+}
+
+.category-card__desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.category-card__arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: var(--cat-text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: var(--cat-transition);
+}
+
+/* --- 6. Hover & Focus Micro-Interactions --- */
+.category-card:hover,
+.category-card:focus-visible {
+  outline: none;
+  transform: translateY(-6px);
+  box-shadow: var(--cat-shadow-hover);
+}
+
+.category-card:hover .category-card__img,
+.category-card:focus-visible .category-card__img {
+  transform: scale(1.08);
+}
+
+.category-card:hover .category-card__overlay,
+.category-card:focus-visible .category-card__overlay {
+  background: rgba(30, 18, 12, 0.85);
+  border-color: rgba(255, 107, 53, 0.4);
+}
+
+.category-card:hover .category-card__arrow,
+.category-card:focus-visible .category-card__arrow {
+  background-color: var(--cat-primary);
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+/* --- 7. Responsive Breakpoints --- */
+
+/* Mobile Large / Small Tablet (min-width: 576px) */
+@media (min-width: 576px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+  .categories__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .categories__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .categories {
+    padding: 6rem 2rem;
+  }
+
+  .categories__grid {
+    /* 3 equal columns per row like the reference layout */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  .categories__title {
+    font-size: 2.75rem;
+  }
+}
