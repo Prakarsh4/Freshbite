@@ -104,13 +104,207 @@
     <section id="hero" class="hero">
         <h1>Welcome to FreshBite</h1>
     </section>
-    <script src="./js/data.js"></script>
-<script src="./js/navbar.js"></script>
-<script src="./js/menu.js"></script>
-<script src="./js/cart.js"></script>
-<script src="./js/checkout.js"></script>
-<script src="./js/auth.js"></script>
-<script src="./js/app.js"></script>
+    <!-- Hero Section -->
+<section class="hero" id="hero" aria-label="Hero Banner">
+  <div class="hero__container">
+    
+    <!-- Left Column: Copy, Search, & Quick Filters -->
+    <div class="hero__content">
+      <span class="hero__badge">
+        <svg class="hero__badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+        Super Fast Delivery in 30 Mins
+      </span>
 
+      <h1 class="hero__title">
+        Hungry? Discover <span class="hero__title-accent">Delicious Meals</span> Delivered To Your Door.
+      </h1>
+
+      <p class="hero__subtitle">
+        Order from top-rated local restaurants with real-time tracking, zero hidden fees, and lightning-fast delivery.
+      </p>
+
+      <!-- Main Search Form -->
+      <form class="hero__search-form" id="heroSearchForm" role="search">
+        <div class="hero__input-wrapper">
+          <svg class="hero__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.3-4.3"/>
+          </svg>
+          <label for="heroSearchInput" class="visually-hidden">Search for dishes, burgers, pizza, or restaurants</label>
+          <input 
+            type="search" 
+            id="heroSearchInput" 
+            class="hero__input" 
+            placeholder="Search pizza, burger, biryani..." 
+            autocomplete="off"
+            required
+          />
+        </div>
+        <button type="submit" class="hero__search-btn">
+          <span>Find Food</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Quick Filter Tags -->
+      <div class="hero__tags">
+        <span class="hero__tags-label">Popular:</span>
+        <div class="hero__tags-list">
+          <button type="button" class="hero__tag" data-query="Pizza">Pizza</button>
+          <button type="button" class="hero__tag" data-query="Burger">Burger</button>
+          <button type="button" class="hero__tag" data-query="Biryani">Biryani</button>
+          <button type="button" class="hero__tag" data-query="Healthy">Healthy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Visual Hero Media -->
+    <div class="hero__visual">
+      <div class="hero__img-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=80" 
+          alt="Freshly prepared delicious food plate" 
+          class="hero__img" 
+          loading="eager"
+        />
+      </div>
+
+      <!-- Floating Stats/Rating Card -->
+      <div class="hero__card hero__card--rating">
+        <div class="hero__card-icon">⭐</div>
+        <div class="hero__card-text">
+          <strong>4.9 Rating</strong>
+          <span>15k+ Reviews</span>
+        </div>
+      </div>
+
+      <div class="hero__card hero__card--delivery">
+        <div class="hero__card-icon">🚴</div>
+        <div class="hero__card-text">
+          <strong>Fast Delivery</strong>
+          <span>Average 25 mins</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Why Choose FreshBite Section -->
+<section class="features" id="features" aria-labelledby="features-heading">
+  <div class="features__container">
+    
+    <!-- Section Header -->
+    <header class="features__header">
+      <span class="features__badge">Why Choose Us</span>
+      <h2 class="features__title" id="features-heading">
+        Why Foodies Love <span class="features__title-accent">FreshBite</span>
+      </h2>
+      <p class="features__subtitle">
+        We go beyond fast food delivery to bring you a seamless, high-quality dining experience right at your doorstep.
+      </p>
+    </header>
+
+    <!-- Features Grid -->
+    <div class="features__grid">
+      
+      <!-- Card 1: Fast Delivery -->
+      <article class="feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">
+          <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Lightning Fast Delivery</h3>
+        <p class="feature-card__description">
+          Hot and fresh meals delivered in under 30 minutes, powered by our real-time smart routing technology.
+        </p>
+      </article>
+
+      <!-- Card 2: Fresh Ingredients -->
+      <article class="feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">
+          <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">100% Fresh Ingredients</h3>
+        <p class="feature-card__description">
+          Partnered exclusively with verified kitchens using handpicked, farm-fresh ingredients daily.
+        </p>
+      </article>
+
+      <!-- Card 3: Top Rated Restaurants -->
+      <article class="feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">
+          <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Top-Rated Restaurants</h3>
+        <p class="feature-card__description">
+          Curated selection of high-rating local eateries, fine dining spots, and iconic street food joints.
+        </p>
+      </article>
+
+      <!-- Card 4: Secure Payment -->
+      <article class="feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">
+          <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">100% Secure Payments</h3>
+        <p class="feature-card__description">
+          Pay with confidence via encrypted UPI, credit/debit cards, net banking, or cash on delivery.
+        </p>
+      </article>
+
+      <!-- Card 5: No Hidden Fees -->
+      <article class="feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">
+          <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Zero Hidden Charges</h3>
+        <p class="feature-card__description">
+          Transparent billing with complete fee breakdown before checkout. No surprise platform fees.
+        </p>
+      </article>
+
+      <!-- Card 6: Instant Customer Support -->
+      <article class="feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">
+          <svg class="feature-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <path d="M8 9h8"/>
+            <path d="M8 13h6"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">24/7 Instant Support</h3>
+        <p class="feature-card__description">
+          Have an issue with your order? Our dedicated live support team is available anytime to resolve it.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+    <script src="./js/data.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/checkout.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/hero.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/features.js"></script>
 </body>
 </html>
