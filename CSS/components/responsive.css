@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+}
