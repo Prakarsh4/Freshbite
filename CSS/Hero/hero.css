@@ -1,0 +1,310 @@
+/* ==========================================================================
+   Hero Section - Mobile-First Modular Styles
+   ========================================================================== */
+
+/* Utility class for accessible screen-reader labels */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Section Container --- */
+.hero {
+  background-color: var(--color-bg-cream, #FFFDF9);
+  padding: 2.5rem 1.25rem 4rem;
+  overflow: hidden;
+}
+
+.hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* --- Left Column: Content --- */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(224, 86, 36, 0.1);
+  color: var(--color-primary-orange, #E05624);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.375rem 0.875rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+}
+
+.hero__badge-icon {
+  fill: currentColor;
+}
+
+.hero__title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--color-dark-brown, #2C1810);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero__title-accent {
+  color: var(--color-primary-orange, #E05624);
+  position: relative;
+  display: inline-block;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted, #5A4E48);
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+/* --- Search Form --- */
+.hero__search-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #FFFFFF;
+  padding: 0.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(44, 24, 16, 0.08);
+  border: 1px solid rgba(44, 24, 16, 0.06);
+}
+
+.hero__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  flex: 1;
+}
+
+.hero__search-icon {
+  stroke: var(--color-text-muted, #8C7A70);
+  flex-shrink: 0;
+}
+
+.hero__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--color-dark-brown, #2C1810);
+  background: transparent;
+}
+
+.hero__input::placeholder {
+  color: #A3968E;
+}
+
+.hero__search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary-orange, #E05624);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.hero__search-btn:hover {
+  background-color: var(--color-orange-hover, #C84517);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(224, 86, 36, 0.3);
+}
+
+.hero__search-btn:active {
+  transform: translateY(0);
+}
+
+/* --- Quick Tags --- */
+.hero__tags {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero__tags-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-muted, #8C7A70);
+}
+
+.hero__tags-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hero__tag {
+  background: rgba(44, 24, 16, 0.04);
+  border: 1px solid rgba(44, 24, 16, 0.08);
+  color: var(--color-dark-brown, #2C1810);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero__tag:hover {
+  background-color: var(--color-primary-orange, #E05624);
+  color: #FFFFFF;
+  border-color: var(--color-primary-orange, #E05624);
+}
+
+/* --- Right Column: Visual Hero Media --- */
+.hero__visual {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(44, 24, 16, 0.12);
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hero__visual:hover .hero__img {
+  transform: scale(1.03);
+}
+
+/* Floating Overlay Cards */
+.hero__card {
+  position: absolute;
+  background: #FFFFFF;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero__card--rating {
+  top: 10%;
+  left: -5%;
+}
+
+.hero__card--delivery {
+  bottom: 10%;
+  right: -5%;
+  animation-delay: 2s;
+}
+
+.hero__card-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.hero__card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__card-text strong {
+  font-size: 0.875rem;
+  color: var(--color-dark-brown, #2C1810);
+}
+
+.hero__card-text span {
+  font-size: 0.75rem;
+  color: #7A6C65;
+}
+
+/* --- Floating Animation --- */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet & Up (min-width: 640px) */
+@media (min-width: 640px) {
+  .hero__search-form {
+    flex-direction: row;
+    padding: 0.375rem 0.375rem 0.375rem 0.75rem;
+  }
+
+  .hero__search-btn {
+    width: auto;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+
+/* Desktop Layout (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 4rem 2rem 5rem;
+  }
+
+  .hero__container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem;
+  }
+}
